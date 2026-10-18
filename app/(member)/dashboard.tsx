@@ -28,8 +28,19 @@ export default function MemberDashboard() {
 
       <View style={styles.actions}>
         <Button
-          title="InBody Assessments"
+          title="🏋️ Approved Workouts"
+          onPress={() => router.push('/(member)/workouts' as any)}
+          style={styles.actionBtn}
+        />
+        <Button
+          title="📊 InBody Assessments"
           onPress={() => router.push('/(member)/inbody' as any)}
+          variant="secondary"
+          style={styles.actionBtn}
+        />
+        <Button
+          title="📈 Progress & History"
+          onPress={() => router.push('/(member)/progress' as any)}
           variant="secondary"
           style={styles.actionBtn}
         />
