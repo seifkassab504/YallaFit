@@ -289,7 +289,14 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
+DROP TRIGGER IF EXISTS update_profiles_updated_at ON public.profiles;
 CREATE TRIGGER update_profiles_updated_at BEFORE UPDATE ON public.profiles FOR EACH ROW EXECUTE FUNCTION public.handle_updated_at();
+
+DROP TRIGGER IF EXISTS update_fitness_profiles_updated_at ON public.fitness_profiles;
 CREATE TRIGGER update_fitness_profiles_updated_at BEFORE UPDATE ON public.fitness_profiles FOR EACH ROW EXECUTE FUNCTION public.handle_updated_at();
+
+DROP TRIGGER IF EXISTS update_inbody_assessments_updated_at ON public.inbody_assessments;
 CREATE TRIGGER update_inbody_assessments_updated_at BEFORE UPDATE ON public.inbody_assessments FOR EACH ROW EXECUTE FUNCTION public.handle_updated_at();
+
+DROP TRIGGER IF EXISTS update_workout_plans_updated_at ON public.workout_plans;
 CREATE TRIGGER update_workout_plans_updated_at BEFORE UPDATE ON public.workout_plans FOR EACH ROW EXECUTE FUNCTION public.handle_updated_at();

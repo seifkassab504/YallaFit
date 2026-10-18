@@ -16,6 +16,7 @@ ON CONFLICT (id) DO UPDATE SET
     allowed_mime_types = ARRAY['image/jpeg', 'image/png', 'image/webp', 'image/heic'];
 
 -- Policy: Members can upload to their own folder: inbody-reports/{member_id}/*
+DROP POLICY IF EXISTS "Members can upload their own reports" ON storage.objects;
 CREATE POLICY "Members can upload their own reports"
     ON storage.objects FOR INSERT
     TO authenticated
@@ -25,6 +26,7 @@ CREATE POLICY "Members can upload their own reports"
     );
 
 -- Policy: Members can view their own uploaded reports
+DROP POLICY IF EXISTS "Members can view own reports" ON storage.objects;
 CREATE POLICY "Members can view own reports"
     ON storage.objects FOR SELECT
     TO authenticated
@@ -34,6 +36,7 @@ CREATE POLICY "Members can view own reports"
     );
 
 -- Policy: Assigned trainers can view reports of their assigned members
+DROP POLICY IF EXISTS "Assigned trainers can view member reports" ON storage.objects;
 CREATE POLICY "Assigned trainers can view member reports"
     ON storage.objects FOR SELECT
     TO authenticated
