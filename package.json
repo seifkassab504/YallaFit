@@ -1,0 +1,51 @@
+{
+  "name": "yallafit",
+  "version": "1.0.0",
+  "description": "Yalla Fit is a proposed B2B fitness platform for gyms in Egypt. It aims to connect body composition assessments—such as InBody reports—with member profiles, personalized workout-plan drafts, trainer review, workout logging, and progress tracking.",
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "tsc": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Seifkassab20/YallaFit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Seifkassab20/YallaFit/issues"
+  },
+  "homepage": "https://github.com/Seifkassab20/YallaFit#readme",
+  "dependencies": {
+    "@hookform/resolvers": "^5.9.2",
+    "@react-native-async-storage/async-storage": "^3.1.1",
+    "@supabase/supabase-js": "^2.118.0",
+    "expo": "^58.0.14",
+    "expo-camera": "^58.0.10",
+    "expo-constants": "^58.0.12",
+    "expo-font": "^58.0.8",
+    "expo-image-picker": "^58.0.10",
+    "expo-linking": "^58.0.13",
+    "expo-router": "^58.0.23",
+    "expo-status-bar": "^58.0.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-hook-form": "^7.90.0",
+    "react-native": "^0.88.0",
+    "react-native-safe-area-context": "^5.10.1",
+    "react-native-screens": "^4.30.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-native": "^0.72.8",
+    "typescript": "^7.0.2"
+  }
+}
